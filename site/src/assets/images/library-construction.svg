@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#f6f1e7" />
+  <rect x="70" y="140" width="1060" height="620" fill="#ffffff" stroke="#b18a4a" stroke-width="6" />
+  <text x="600" y="470" text-anchor="middle" font-size="46" fill="#24382f" font-family="Georgia, serif">Library Construction</text>
+</svg>

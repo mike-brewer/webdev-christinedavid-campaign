@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+:root {
+  --color-forest: #24382f;
+  --color-forest-light: #3d574a;
+  --color-cream: #f6f1e7;
+  --color-warm-white: #fcfaf6;
+  --color-gold: #b18a4a;
+  --color-gold-light: #d8c39d;
+  --color-charcoal: #252525;
+  --color-gray: #6d6d67;
+  --color-border: #ddd5c8;
+  --color-white: #ffffff;
+
+  --max-width: 1180px;
+  --content-width: 760px;
+  --section-spacing: 96px;
+
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+  --shadow-soft: 0 8px 30px rgba(36, 56, 47, 0.08);
+  --radius: 14px;
+}
