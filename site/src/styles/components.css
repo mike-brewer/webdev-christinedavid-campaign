@@ -102,6 +102,9 @@
 }
 
 .timeline-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   margin-top: 0.8rem;
   border-radius: 10px;
 }

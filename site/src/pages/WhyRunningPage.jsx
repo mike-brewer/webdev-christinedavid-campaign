@@ -55,7 +55,7 @@ function WhyRunningPage() {
         </p>
       </section>
 
-      <section className="container section">
+      <section className="container section narrow-content">
         <SectionHeader title="What Council Service Requires" align="center" />
         <div className="feature-grid principles-grid">
           {principles.map((principle) => (

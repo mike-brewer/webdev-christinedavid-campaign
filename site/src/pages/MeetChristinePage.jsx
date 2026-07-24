@@ -1,6 +1,4 @@
-import childhoodImage from '../assets/images/christine-childhood-stage.svg'
 import portraitImage from '../assets/images/christine-portrait.svg'
-import speakingImage from '../assets/images/christine-speaking.svg'
 import ImageWithCaption from '../components/shared/ImageWithCaption.jsx'
 import QuoteBlock from '../components/shared/QuoteBlock.jsx'
 import SectionHeader from '../components/shared/SectionHeader.jsx'
@@ -63,13 +61,13 @@ function MeetChristinePage() {
         </div>
         <div className="image-stack meet-tradition-media">
           <ImageWithCaption
-            src={childhoodImage}
-            alt="Childhood stage appearance placeholder"
+            src="/imgs/young-christine.avif"
+            alt="Christine as a child speaking on stage"
             caption="Early public speaking experience"
           />
           <ImageWithCaption
-            src={speakingImage}
-            alt="Professional speaking placeholder"
+            src="/imgs/early-speaking.jpeg"
+            alt="Christine speaking at an early event"
             caption="Communication developed through professional and civic work"
           />
         </div>

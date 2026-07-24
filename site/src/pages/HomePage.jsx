@@ -1,4 +1,3 @@
-import portraitImage from '../assets/images/christine-portrait.svg'
 import CalloutBanner from '../components/shared/CalloutBanner.jsx'
 import PriorityCard from '../components/shared/PriorityCard.jsx'
 import PrimaryButton from '../components/shared/PrimaryButton.jsx'
@@ -25,33 +24,26 @@ function HomePage() {
 
   return (
     <>
-      <section className="hero-section container home-hero">
-        <div className="hero-copy">
-          <p className="eyebrow">ATHERTON CITY COUNCIL - NOVEMBER 2026</p>
-          <h1>Christine David</h1>
-          <p className="hero-tagline">{siteData.tagline}</p>
-          <p>
-            Christine has spent more than two decades serving Atherton through its committees,
-            civic organizations, library, emergency-preparedness efforts, and community
-            institutions.
-          </p>
-          <p>
-            She is running to bring that experience to the Town Council and ensure that residents
-            have a meaningful voice in Atherton&apos;s future.
-          </p>
-          <div className="button-row">
-            <PrimaryButton to="/meet-christine">Meet Christine</PrimaryButton>
-            <SecondaryButton to="/priorities">Explore Her Priorities</SecondaryButton>
+      <section className="home-hero-header">
+        <div className="hero-section container home-hero">
+          <div className="hero-copy">
+            <p className="eyebrow">ATHERTON CITY COUNCIL - NOVEMBER 2026</p>
+            <h1>Christine David</h1>
+            <p className="hero-tagline">{siteData.tagline}</p>
+            <p>
+              Christine has spent more than two decades serving Atherton through its committees,
+              civic organizations, library, emergency-preparedness efforts, and community
+              institutions.
+            </p>
+            <p>
+              She is running to bring that experience to the Town Council and ensure that residents
+              have a meaningful voice in Atherton&apos;s future.
+            </p>
+            <div className="button-row">
+              <PrimaryButton to="/meet-christine">Meet Christine</PrimaryButton>
+              <SecondaryButton to="/priorities">Explore Her Priorities</SecondaryButton>
+            </div>
           </div>
-        </div>
-
-        <div className="hero-image-frame">
-          <img
-            src={portraitImage}
-            alt="Portrait placeholder for Christine David campaign"
-            width="600"
-            height="450"
-          />
         </div>
       </section>
 
@@ -129,6 +121,7 @@ function HomePage() {
         </div>
         {featuredStory?.image ? (
           <img
+            className="featured-story-image"
             src={featuredStory.image}
             alt="Library and civic center story image placeholder"
             loading="lazy"

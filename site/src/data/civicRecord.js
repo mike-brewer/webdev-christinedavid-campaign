@@ -1,8 +1,6 @@
 import adaptEvent from '../assets/images/adapt-event.svg'
 import athertonTownCenter from '../assets/images/atherton-town-center.svg'
 import holbrookPalmerPark from '../assets/images/holbrook-palmer-park.svg'
-import libraryConstruction from '../assets/images/library-construction.svg'
-
 export const civicRecord = [
   {
     dates: 'To be confirmed',
@@ -45,8 +43,8 @@ export const civicRecord = [
       'Fundraising participation',
       'Community awareness outreach',
     ],
-    image: libraryConstruction,
-    imageAlt: 'Library construction placeholder image',
+    image: '/imgs/library-construction.jpg',
+    imageAlt: 'Library construction at Atherton Library',
   },
   {
     dates: '2018-2022',
@@ -105,7 +103,7 @@ export const civicRecord = [
       'Public art and event support',
       'Partnerships with Town and police',
     ],
-    image: libraryConstruction,
-    imageAlt: 'Library programming placeholder image',
+    image: '/imgs/library-construction.jpg',
+    imageAlt: 'Atherton Library construction interior',
   },
 ]
