@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
-  <title id="title">Christine portrait placeholder</title>
-  <desc id="desc">Placeholder image for campaign portrait.</desc>
-  <rect width="1200" height="900" fill="#d8c39d" />
-  <rect x="70" y="70" width="1060" height="760" fill="#f6f1e7" stroke="#24382f" stroke-width="6" />
-  <text x="600" y="430" text-anchor="middle" font-size="54" fill="#24382f" font-family="Georgia, serif">Christine David</text>
-  <text x="600" y="500" text-anchor="middle" font-size="30" fill="#3d574a" font-family="Arial, sans-serif">Portrait Placeholder</text>
-</svg>

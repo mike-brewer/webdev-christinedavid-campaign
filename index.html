@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christine E. David · Council Member, Town of Atherton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-950:#0d1f18;
+    --green-900:#122a20;
+    --green-800:#1b3a2c;
+    --green-700:#264d3b;
+    --green-650:#2d5744;
+    --cream:#f4f0e6;
+    --cream-dim:#d9d2bf;
+    --gold:#c9a24b;
+    --gold-bright:#e0bc6c;
+    --gold-dim:#8a7038;
+    --rule:rgba(201,162,75,0.28);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--green-950);
+    color:var(--cream);
+    font-family:'Libre Baskerville',serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.display{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--cream);
+    margin:0;
+  }
+  .eyebrow{
+    font-family:'Libre Baskerville',serif;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:400;
+  }
+  a{color:var(--gold-bright);}
+  .wrap{max-width:1080px; margin:0 auto; padding-left:1.5rem; padding-right:1.5rem;}
+  section{position:relative;}
+  .rule-top{border-top:1px solid var(--rule);}
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(13,31,24,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:1080px; margin:0 auto; padding:0.9rem 1.5rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+  }
+  .nav-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.25rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+  }
+  .nav-name span{color:var(--gold-bright); font-style:italic;}
+  .nav-links{
+    display:flex; gap:1.6rem; flex-wrap:wrap;
+    font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase;
+  }
+  .nav-links a{color:var(--cream-dim); text-decoration:none; transition:color .2s;}
+  .nav-links a:hover{color:var(--gold-bright);}
+  .nav-cta{
+    font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase;
+    border:1px solid var(--gold); color:var(--gold-bright);
+    padding:0.5rem 1rem; border-radius:2px; text-decoration:none; white-space:nowrap;
+  }
+  @media (max-width:800px){ .nav-links{display:none;} }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    padding:5.5rem 1.5rem 4.5rem;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(201,162,75,0.14), transparent 55%),
+      linear-gradient(180deg, var(--green-950), var(--green-900) 60%, var(--green-950));
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--rule) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+    background-size:64px 64px;
+    opacity:0.1;
+    mask-image: radial-gradient(ellipse at 50% 20%, black, transparent 70%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:800px; margin:0 auto;}
+  .hero .eyebrow{display:block; margin-bottom:1.3rem;}
+  .hero h1{
+    font-size:clamp(2rem, 4.6vw, 3.4rem);
+    line-height:1.15;
+    letter-spacing:-0.005em;
+  }
+  .hero h1 em{font-style:italic; color:var(--gold-bright);}
+  .hero .sub{
+    margin-top:1.5rem;
+    font-size:1.02rem;
+    color:var(--cream-dim);
+    max-width:640px;
+    margin-left:auto; margin-right:auto;
+  }
+  .hero-badges{
+    margin-top:1.8rem;
+    display:flex; flex-wrap:wrap; gap:0.6rem; justify-content:center;
+  }
+  .badge{
+    font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase;
+    border:1px solid var(--rule); color:var(--cream-dim);
+    padding:0.4rem 0.85rem; border-radius:20px;
+  }
+  .hero-actions{
+    margin-top:2.4rem;
+    display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;
+  }
+  .btn-primary{
+    background:var(--gold); color:var(--green-950); font-weight:700;
+    font-family:'Libre Baskerville',serif; font-size:0.82rem;
+    letter-spacing:0.06em; text-transform:uppercase;
+    padding:0.85rem 1.7rem; border-radius:2px; text-decoration:none;
+  }
+  .btn-ghost{
+    border:1px solid var(--rule); color:var(--cream-dim);
+    font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase;
+    padding:0.85rem 1.7rem; border-radius:2px; text-decoration:none;
+  }
+  .hero-stats{
+    margin-top:3.4rem;
+    display:flex; justify-content:center; gap:clamp(1.6rem,5vw,3.6rem); flex-wrap:wrap;
+  }
+  .hero-stat{text-align:center;}
+  .hero-stat .num{font-family:'Cormorant Garamond',serif; font-size:2.4rem; color:var(--gold-bright); line-height:1;}
+  .hero-stat .lbl{margin-top:0.4rem; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--cream-dim);}
+
+  /* ===== PULL QUOTE ===== */
+  .pullquote{
+    padding:4rem 1.5rem;
+    text-align:center;
+    background:var(--green-900);
+  }
+  .pullquote blockquote{
+    max-width:720px; margin:0 auto;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic; font-weight:500;
+    font-size:clamp(1.3rem,3vw,1.9rem);
+    line-height:1.45;
+    color:var(--cream);
+  }
+  .pullquote cite{
+    display:block; margin-top:1.3rem;
+    font-family:'Libre Baskerville',serif; font-style:normal;
+    font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold);
+  }
+
+  /* ===== FEATURE CARDS ===== */
+  .features{padding:4.5rem 1.5rem;}
+  .features-grid{
+    max-width:1080px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem;
+  }
+  @media (max-width:820px){ .features-grid{grid-template-columns:1fr;} }
+  .feature-card{
+    border:1px solid var(--rule);
+    padding:2rem 1.7rem;
+    border-radius:4px;
+    background:linear-gradient(180deg, rgba(201,162,75,0.04), transparent);
+  }
+  .feature-icon{font-size:1.8rem; margin-bottom:1rem; display:block;}
+  .feature-card h3{font-size:1.3rem; margin-bottom:0.7rem; line-height:1.3;}
+  .feature-card p{margin:0; color:var(--cream-dim); font-size:0.92rem;}
+
+  /* ===== SECTION HEADER ===== */
+  .section-head{
+    max-width:680px; margin:0 auto 3rem;
+    text-align:center;
+  }
+  .section-head .eyebrow{display:block; margin-bottom:0.8rem;}
+  .section-head h2{
+    font-size:clamp(1.8rem,3.6vw,2.6rem);
+    line-height:1.2;
+  }
+  .section-head p{margin-top:1rem; color:var(--cream-dim); font-size:0.98rem;}
+
+  /* ===== ABOUT ===== */
+  .about{padding:5.5rem 1.5rem;}
+  .about-body{max-width:720px; margin:0 auto;}
+  .about-body p{color:var(--cream-dim); font-size:1rem; margin-bottom:1.3rem;}
+  .inset-quote{
+    border-left:2px solid var(--gold);
+    padding:0.3rem 0 0.3rem 1.4rem;
+    margin:2.2rem 0;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1.2rem;
+    color:var(--cream);
+  }
+  .inset-quote cite{
+    display:block; margin-top:0.7rem;
+    font-family:'Libre Baskerville',serif; font-style:normal;
+    font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold);
+  }
+
+  /* ===== PHOTO PLACEHOLDER ===== */
+  .photo-ph{
+    position:relative;
+    aspect-ratio: 4/3;
+    border:1px solid var(--rule);
+    border-radius:4px;
+    background:
+      repeating-linear-gradient(135deg, rgba(201,162,75,0.05) 0 2px, transparent 2px 14px),
+      linear-gradient(160deg, var(--green-800), var(--green-900));
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    overflow:hidden;
+  }
+  .photo-ph .ph-inner{padding:1rem;}
+  .photo-ph .ph-icon{font-size:1.6rem; opacity:0.7; margin-bottom:0.5rem;}
+  .photo-ph .ph-label{
+    font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold-dim);
+  }
+  .photo-ph img{width:100%; height:100%; object-fit:cover; display:block;}
+
+  /* ===== ROOTS GALLERY ===== */
+  .roots{padding:5.5rem 1.5rem; background:var(--green-900);}
+  .roots-grid{
+    max-width:1080px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem;
+  }
+  @media (max-width:900px){ .roots-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .roots-grid{grid-template-columns:1fr;} }
+  .roots-item .photo-ph{aspect-ratio:3/4; margin-bottom:0.9rem;}
+  .roots-item .tag-line{
+    font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);
+    margin-bottom:0.35rem;
+  }
+  .roots-item h4{font-size:1.1rem; margin-bottom:0.4rem; line-height:1.3;}
+  .roots-item p{font-size:0.85rem; color:var(--cream-dim); margin:0;}
+
+  /* ===== TIMELINE ===== */
+  .timeline-section{padding:5.5rem 1.5rem 6rem;}
+  .timeline{max-width:880px; margin:3.5rem auto 0; position:relative;}
+  .spine{position:absolute; left:120px; top:0; bottom:0; width:1px; background:linear-gradient(180deg, transparent, var(--rule) 4%, var(--rule) 96%, transparent);}
+  @media (max-width:720px){ .spine{left:28px;} }
+  .entry{position:relative; display:grid; grid-template-columns:100px 40px 1fr; gap:0; padding-bottom:3.2rem;}
+  .entry:last-child{padding-bottom:0;}
+  @media (max-width:720px){ .entry{grid-template-columns:0px 56px 1fr;} .entry .date-col{display:none;} }
+  .date-col{padding-top:0.15rem; text-align:right; padding-right:1rem; font-family:'Cormorant Garamond',serif; font-size:0.98rem; color:var(--gold); font-weight:600;}
+  .node-col{position:relative; display:flex; justify-content:center;}
+  .node{width:11px; height:11px; border-radius:50%; background:var(--green-950); border:2px solid var(--gold); margin-top:0.35rem; z-index:2; flex-shrink:0;}
+  .entry.milestone .node{background:var(--gold); box-shadow:0 0 0 4px rgba(201,162,75,0.18);}
+  .content-col{padding-left:1.4rem;}
+  .mobile-date{display:none; font-family:'Cormorant Garamond',serif; color:var(--gold); font-weight:600; font-size:0.92rem; margin-bottom:0.3rem;}
+  @media (max-width:720px){ .mobile-date{display:block;} }
+  .entry h3{font-size:1.4rem; line-height:1.25; margin-bottom:0.5rem;}
+  .entry .tag{display:inline-block; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--green-950); background:var(--gold); padding:0.2rem 0.5rem; border-radius:2px; margin-bottom:0.65rem; font-weight:700;}
+  .entry.milestone .tag{background:transparent; border:1px solid var(--gold); color:var(--gold-bright);}
+  .entry p{margin:0; font-size:0.94rem; color:var(--cream-dim); max-width:58ch;}
+  .entry p + p{margin-top:0.55rem;}
+  .card{border-left:1px solid var(--rule); padding-left:1.15rem;}
+  .entry.milestone .card{border-left:1px solid var(--gold-dim); background:linear-gradient(90deg, rgba(201,162,75,0.06), transparent 60%); padding:0.85rem 1.15rem; border-radius:0 4px 4px 0;}
+
+  /* ===== DEEP DIVE (Park & Rec, ADAPT) ===== */
+  .deepdive{padding:5.5rem 1.5rem;}
+  .deepdive.alt{background:var(--green-900);}
+  .dd-story{max-width:820px; margin:3rem auto 0; display:flex; flex-direction:column; gap:2.6rem;}
+  .dd-block{
+    border:1px solid var(--rule); border-radius:4px; padding:2rem;
+  }
+  .dd-block.win{border-color:var(--gold-dim); background:linear-gradient(160deg, rgba(201,162,75,0.06), transparent);}
+  .dd-status{
+    display:inline-block; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--gold-bright); border:1px solid var(--gold-dim); padding:0.25rem 0.6rem; border-radius:20px; margin-bottom:1rem;
+  }
+  .dd-block h3{font-size:1.55rem; margin-bottom:1rem; line-height:1.3;}
+  .dd-block p{color:var(--cream-dim); font-size:0.95rem; margin-bottom:1rem;}
+  .dd-block p:last-child{margin-bottom:0;}
+
+  /* stat strip */
+  .stat-strip{
+    max-width:1080px; margin:3.5rem auto 0;
+    display:grid; grid-template-columns:repeat(6,1fr); gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    border-radius:4px;
+    overflow:hidden;
+  }
+  @media (max-width:820px){ .stat-strip{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:480px){ .stat-strip{grid-template-columns:repeat(2,1fr);} }
+  .stat-cell{background:var(--green-950); padding:1.5rem 1rem; text-align:center;}
+  .stat-cell .n{font-family:'Cormorant Garamond',serif; color:var(--gold-bright); font-size:1.9rem; line-height:1;}
+  .stat-cell .l{margin-top:0.5rem; font-size:0.68rem; color:var(--cream-dim); line-height:1.35;}
+
+  .dd-photo-row{max-width:820px; margin:2.6rem auto 0;}
+  .dd-photo-row .photo-ph{aspect-ratio:16/9;}
+  .dd-photo-caption{
+    margin-top:0.8rem; text-align:center;
+    font-size:0.82rem; color:var(--cream-dim); font-style:italic;
+    font-family:'Cormorant Garamond',serif;
+  }
+
+  /* ===== TOAD GALLERY ===== */
+  .toad-grid{
+    max-width:1080px; margin:3rem auto 0;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem;
+  }
+  @media (max-width:820px){ .toad-grid{grid-template-columns:1fr;} }
+  .toad-step .step-label{font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.7rem;}
+  .toad-step .photo-ph{aspect-ratio:4/3; margin-bottom:1rem;}
+  .toad-step p{color:var(--cream-dim); font-size:0.9rem; margin:0;}
+
+  /* ===== SPEAKER LIST ===== */
+  .speaker-list{margin-top:2rem;}
+  .speaker{
+    display:grid; grid-template-columns:180px 1fr; gap:1.2rem;
+    padding:1.1rem 0; border-top:1px solid var(--rule);
+  }
+  .speaker:first-child{border-top:none;}
+  .speaker .who{font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--cream); line-height:1.3;}
+  .speaker .who span{display:block; font-family:'Libre Baskerville',serif; font-size:0.67rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-top:0.25rem;}
+  .speaker .what{font-size:0.88rem; color:var(--cream-dim);}
+  @media (max-width:600px){ .speaker{grid-template-columns:1fr;} }
+
+  /* ===== PLATFORM ===== */
+  .platform{padding:5.5rem 1.5rem;}
+  .platform-grid{
+    max-width:1080px; margin:3rem auto 0;
+    display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem;
+  }
+  @media (max-width:760px){ .platform-grid{grid-template-columns:1fr;} }
+  .plank{border:1px solid var(--rule); border-radius:4px; padding:1.8rem;}
+  .plank-icon{font-size:1.5rem; margin-bottom:0.8rem; display:block;}
+  .plank h3{font-size:1.2rem; margin-bottom:0.6rem; line-height:1.3;}
+  .plank p{margin:0; color:var(--cream-dim); font-size:0.9rem;}
+
+  /* ===== CLOSING / CONTACT ===== */
+  .closing{
+    border-top:1px solid var(--rule);
+    background:linear-gradient(180deg, var(--green-900), var(--green-950));
+    padding:5.5rem 1.5rem 6rem;
+    text-align:center;
+  }
+  .closing-inner{max-width:640px; margin:0 auto;}
+  .closing .eyebrow{display:block; margin-bottom:1rem;}
+  .closing h2{font-size:clamp(1.8rem,3.6vw,2.6rem); line-height:1.3;}
+  .closing p{margin-top:1.2rem; color:var(--cream-dim); font-size:1rem;}
+  .closing-contact{
+    margin-top:2rem; display:flex; flex-direction:column; gap:0.5rem; align-items:center;
+    font-size:0.95rem; color:var(--cream-dim);
+  }
+  .closing-contact a{text-decoration:none;}
+  .closing-actions{margin-top:2.2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;}
+
+  footer{text-align:center; padding:2.2rem 1.5rem; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-dim); border-top:1px solid var(--rule);}
+
+  @media (prefers-reduced-motion:no-preference){
+    .entry{opacity:0; transform:translateY(14px); animation:rise 0.7s ease forwards;}
+  }
+  @keyframes rise{ to{opacity:1; transform:translateY(0);} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name">Christine <span>David</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#record">Full Record</a>
+      <a href="#park">Park &amp; Rec</a>
+      <a href="#adapt">ADAPT</a>
+      <a href="#library">Library</a>
+      <a href="#priorities">Priorities</a>
+    </div>
+    <a class="nav-cta" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Council Member · Town of Atherton · Sworn In December 2026</span>
+    <h1>Christine E. David — <em>Now from the inside.</em></h1>
+    <p class="sub">Twenty years of showing up — on every committee, in every room that mattered. Christine E. David was sworn in to the Atherton City Council in December 2026, carrying forward the same record of civic commitment that residents sent her there to continue.</p>
+    <div class="hero-badges">
+      <span class="badge">Council Member</span>
+      <span class="badge">Friends Chair</span>
+      <span class="badge">ADAPT Board</span>
+      <span class="badge">CCAC Member</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#record" class="btn-primary">View Full Record ↓</a>
+      <a href="#contact" class="btn-ghost">Constituent Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">20+</div><div class="lbl">Years Resident</div></div>
+      <div class="hero-stat"><div class="num">4+</div><div class="lbl">Committees Served</div></div>
+      <div class="hero-stat"><div class="num">Chair</div><div class="lbl">Friends of Library</div></div>
+      <div class="hero-stat"><div class="num">Dec 2026</div><div class="lbl">Sworn In</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PULLQUOTE ================= -->
+<section class="pullquote">
+  <blockquote>"My work on this Council is motivated by the same commitment that brought me here: to protect our community's incredible character, charmed history, and promising future by reinvigorating resident involvement on every level."</blockquote>
+  <cite>— Christine E. David, Atherton City Council</cite>
+</section>
+
+<!-- ================= FEATURE CARDS ================= -->
+<section class="features">
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="feature-icon">📚</span>
+      <h3>Friends of Library — Chair</h3>
+      <p>Leads the nonprofit that activates Atherton's library every week — a growing Speaker Series, public art, children's programs, and community events that make the award-winning building earn its place as the heart of Atherton.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🏛️</span>
+      <h3>Civic Center &amp; Library Built</h3>
+      <p>CCAC member &amp; Atherton Now co-chair — helped design and fund Atherton's $50M Town Center and its national-award-winning library. Now stewards those same institutions from a seat on the Council.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🚨</span>
+      <h3>ADAPT Board — Get Ready Atherton</h3>
+      <p>Served on the board of ADAPT, Atherton's 501(c)(3) disaster preparedness organization — the rare civic credential that directly addresses the town's physical vulnerability to earthquake, wildfire, and flood.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about rule-top" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">About Council Member David</span>
+      <h2>Thirteen years of civic leadership — now with a seat at the table</h2>
+    </div>
+    <div class="about-body">
+      <p>Christine E. David has spent two decades as an Atherton resident and thirteen years as an active civic participant — on advisory committees, in nonprofit leadership, and in direct advocacy before the Council. In December 2026, she took the one seat she hadn't yet held.</p>
+      <p>She helped design the Town Center and library as a Civic Center Advisory Committee member, co-chaired marketing for Atherton Now (the fundraising campaign that made the civic center possible), served as Vice Chair of the Transportation, Bicycle and Pedestrian Safety Committee, served as Vice Chair of the Park and Recreation Committee, sat on the board of ADAPT, and led the Friends of Atherton Library as Chair before her election.</p>
+      <div class="inset-quote">
+        "I have found it difficult to establish real change without being a member of our town council. It is time to bring twenty years of civic commitment to the seat where I can do the most good."
+        <cite>— Christine David, 2026 Campaign Statement</cite>
+      </div>
+      <p>She did not run against the institution. She helped to build it — through Atherton Now, through the Civic Center Advisory Committee, through the Friends of Atherton Library. Now she leads it from the dais, carrying forward the same standard of resident-first engagement into every vote.</p>
+      <p>Every committee. Every meeting. Every fundraising ask. Christine was present in the civic life of this town not because it was convenient, but because she believes — fundamentally — that residents are the rightful stewards of the place they call home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROOTS GALLERY ================= -->
+<section class="roots rule-top">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The World Christine's Family Shaped</span>
+      <h2>Roots in Place &amp; Time</h2>
+      <p>The streets of San Francisco that Christine's family walked since the 1850s — and the town of Atherton, where law, order, and civic duty were already a way of life generations before Christine's public service began.</p>
+    </div>
+    <div class="roots-grid">
+      <div class="roots-item">
+        <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+        <div class="tag-line">Atherton, CA · Circa 1920s</div>
+        <h4>Atherton Town Hall</h4>
+        <p>Two Atherton Police officers stand before the Town Hall entrance — civic duty as a local institution, decades before Christine would serve the same community.</p>
+      </div>
+      <div class="roots-item">
+        <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+        <div class="tag-line">Atherton · Estate Gatehouse</div>
+        <h4>Atherton Estate Gatehouse</h4>
+        <p>The ornate gateway that defined Atherton's character — the same quiet, tree-lined town Christine has dedicated decades to protecting for future generations.</p>
+      </div>
+      <div class="roots-item">
+        <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+        <div class="tag-line">San Francisco · Late 1850s</div>
+        <h4>The City Christine's Family Built</h4>
+        <p>The cable-car streets and Victorian skyline of San Francisco — where Christine's family put down roots five generations ago, shaping the civic culture she carries forward today.</p>
+      </div>
+      <div class="roots-item">
+        <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+        <div class="tag-line">San Francisco → Atherton</div>
+        <h4>Today</h4>
+        <p>Five generations later, the same commitment to civic life continues — now carried forward from a seat on the Atherton City Council.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FULL RECORD TIMELINE ================= -->
+<section class="timeline-section rule-top" id="record">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The Full Record</span>
+      <h2>Six commitments. Two decades. Zero shortcuts.</h2>
+      <p>Christine's civic biography is not a steppingstone. It is a complete record of service across almost every major institution shaping life in Atherton — culminating in her election to the Council in 2026.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="spine"></div>
+
+      <div class="entry">
+        <div class="date-col">2013–2017</div>
+        <div class="node-col"><div class="node"></div></div>
+        <div class="content-col">
+          <div class="mobile-date">2013–2017</div>
+          <div class="card">
+            <span class="tag">Civic Center Advisory Committee</span>
+            <h3>Voting Member</h3>
+            <p>Appointed to the CCAC — the resident body that shaped Atherton's $50M Town Center from concept through design. Christine participated in environmental review hearings, asked pointed questions about air quality impacts during the CEQA process, and contributed to the community outreach and design deliberations that produced Atherton's nationally award-winning civic campus.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="date-col">2013–2018</div>
+        <div class="node-col"><div class="node"></div></div>
+        <div class="content-col">
+          <div class="mobile-date">2013–2018</div>
+          <div class="card">
+            <span class="tag">Atherton Now</span>
+            <h3>Co-Chair of Marketing &amp; Personal Donor</h3>
+            <p>Co-chaired the marketing campaign for Atherton Now — the nonprofit that raised private donations to seed the civic center project, raising over $7M. Christine and her husband Mike also personally donated to the campaign, appearing by name on the Atherton Now donor roll. She did not just ask others to give; she gave herself.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="date-col">2015–2019</div>
+        <div class="node-col"><div class="node"></div></div>
+        <div class="content-col">
+          <div class="mobile-date">2015–2019</div>
+          <div class="card">
+            <span class="tag">Park &amp; Recreation Committee</span>
+            <h3>Vice Chair</h3>
+            <p>Served as an appointed member of Atherton's Park and Recreation Committee, contributing to master plan updates, venue policy, and programming for Holbrook-Palmer Park. Christine personally drafted a detailed 21,000-square-foot dog park proposal near the tennis courts — with cost estimates of $65,000–$100,000 — on behalf of the committee's recommendation to the Council.</p>
+            <p>Her resignation in December 2019, in protest of the Council's dismissal of that recommendation, was a principled act that clarified her motivations for seeking elected office.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="date-col">Apr 2021–Jun 2023</div>
+        <div class="node-col"><div class="node"></div></div>
+        <div class="content-col">
+          <div class="mobile-date">April 2021 – June 2023</div>
+          <div class="card">
+            <span class="tag">A.D.A.P.T. Board Member</span>
+            <h3>Get Ready Atherton</h3>
+            <p>Christine David's appointment to a board seat ran from April 2021 through June 30, 2023. ADAPT (Atherton Disaster and Preparedness Team) is a 501(c)(3) nonprofit formed in 1999 that partners with Atherton Police, Menlo Park Fire District, and county emergency services to prepare residents for earthquakes, wildfires, floods, and other major disasters.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="date-col">2022</div>
+        <div class="node-col"><div class="node"></div></div>
+        <div class="content-col">
+          <div class="mobile-date">2022</div>
+          <div class="card">
+            <span class="tag">Transportation, Bicycle &amp; Pedestrian Safety Committee</span>
+            <h3>Vice Chair</h3>
+            <p>Served as Vice Chair of Atherton's Transportation, Bicycle and Pedestrian Safety Committee in 2022 — advising the City Council on transportation, traffic, roadway, pedestrian, and bicycle safety matters across the Town, and fulfilling Atherton's obligations to the Metropolitan Transportation Commission.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry milestone">
+        <div class="date-col">2023–Present</div>
+        <div class="node-col"><div class="node"></div></div>
+        <div class="content-col">
+          <div class="mobile-date">2023 – Present</div>
+          <div class="card">
+            <span class="tag">Friends of Atherton Library</span>
+            <h3>Chair</h3>
+            <p>Leads the 501(c)(3) nonprofit that supports the Atherton Community Library — building a Speaker Series, launching children's programs, donating the "Toad" bronze sculpture, partnering with the Town and Atherton Police on community events, and creating a sense of community with the library and Town. Under her leadership, the Friends have expanded programming for all ages and grown from a newly reinvigorated board to an active civic institution.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry milestone">
+        <div class="date-col">Dec 2026</div>
+        <div class="node-col"><div class="node"></div></div>
+        <div class="content-col">
+          <div class="mobile-date">December 2026</div>
+          <div class="card">
+            <span class="tag">Atherton City Council</span>
+            <h3>Council Member — Sworn In</h3>
+            <p>Atherton voters elected Christine to the seat she had sought since 2020, carrying forward two decades of committee work, library leadership, and community organizing onto the dais. She was sworn in as a Council Member for the Town of Atherton in December 2026.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARK & RECREATION DEEP DIVE ================= -->
+<section class="deepdive alt rule-top" id="park">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Park &amp; Recreation Committee</span>
+      <h2>Fighting for Holbrook-Palmer — twice</h2>
+      <p>Christine's Park and Recreation Committee service produced two of the most consequential civic moments in recent Atherton history — both involving threats to Holbrook-Palmer Park, both ending with the park protected.</p>
+    </div>
+
+    <div class="dd-story">
+      <div class="dd-block win">
+        <span class="dd-status">✓ Park Protected</span>
+        <h3>The Water Capture Facility (2018)</h3>
+        <p>Caltrans offered Atherton $13.6 million to build an underground concrete water-capture facility at Holbrook-Palmer Park — buried 11 feet deep under 6 feet of soil, holding 9 acre-feet of water. The money was real. The pressure to accept it was real.</p>
+        <p>At the March 7, 2018 Park and Recreation Committee meeting — the very committee Christine sat on — more than 60 residents showed up to oppose the project. Christine was in the room as a committee member, hearing those concerns not as a distant administrator but as a neighbor. The committee's message was clear: the park belongs to recreation, not infrastructure.</p>
+        <p>By May 2018, the Council directed staff to stop work on the park site. By September, Cartan Field at Menlo College/Menlo School was identified as the alternative. Holbrook-Palmer was preserved.</p>
+      </div>
+
+      <div class="dd-block">
+        <span class="dd-status" style="color:var(--cream-dim); border-color:var(--rule);">Principle Over Protocol</span>
+        <h3>The Dog Park Resignation (2019)</h3>
+        <p>Christine joined the Park and Recreation Committee in 2015, contributing to master plan updates and park programming. The committee began studying the feasibility of an off-leash dog area in Holbrook-Palmer Park. Christine did not just attend meetings — she drafted the proposal herself: a detailed 21,000-square-foot dog park near the tennis courts, with cost estimates between $65,000 and $100,000.</p>
+        <p>The committee voted to recommend the concept to the Council. At the November 2019 Council meeting, Christine arrived expecting a deliberative review. What she got instead was a split vote to remove the dog park from the master plan entirely.</p>
+        <p>Christine resigned from the Park and Recreation Committee in protest — a principled act that clarified her motivations for ultimately seeking elected office. She did not do so quietly: she immediately began planning how to keep the proposal alive through other channels. That experience is part of why she ran — and why Atherton voters sent her to the Council.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ADAPT DEEP DIVE ================= -->
+<section class="deepdive rule-top" id="adapt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">A.D.A.P.T. — Get Ready Atherton</span>
+      <h2>Disaster preparedness: the civic work no one sees until it matters</h2>
+      <p>From April 2021 through June 2023, Christine served on the board of ADAPT — the volunteer organization that prepares Atherton for the disasters it hopes never to face.</p>
+    </div>
+
+    <div class="dd-story" style="max-width:820px;">
+      <div class="dd-block">
+        <p>ADAPT — the Atherton Disaster and Preparedness Team — is a 501(c)(3) nonprofit formed in 1999 and incorporated under Scott Barnum's leadership in 2008. It partners with Atherton Police, the Menlo Park Fire District, San Mateo County Office of Emergency Management, and state and federal agencies to prepare Atherton's approximately 7,200 residents for major emergencies: earthquakes, wildfires, floods, train derailments, and hazardous material events.</p>
+        <p>ADAPT organizes its work across 14 neighborhood areas, each with Area Coordinators and Block Captains. It manages Atherton's emergency communication network, maintains a mobile command vehicle and equipment caches, and conducts annual community emergency drills.</p>
+        <p>Christine held a board seat from April 2021 through June 30, 2023 — serving during the organization's active expansion of community programming, neighborhood coordination, and public education efforts. This is quiet, unglamorous, consequential civic work: the kind that saves lives precisely when it is invisible the rest of the time. As Council Member, Christine continues to champion the partnership between ADAPT, police, fire, and county emergency services.</p>
+      </div>
+    </div>
+
+    <div class="dd-photo-row">
+      <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+      <div class="dd-photo-caption">Christine alongside Atherton's Chief of Police Steve McCully</div>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat-cell"><div class="n">1999</div><div class="l">Founded by Atherton residents; incorporated 501(c)(3) in 2008</div></div>
+      <div class="stat-cell"><div class="n">14</div><div class="l">Neighborhood areas, each with Area Coordinators</div></div>
+      <div class="stat-cell"><div class="n">7,200</div><div class="l">Atherton residents the organization exists to protect</div></div>
+      <div class="stat-cell"><div class="n">8,000</div><div class="l">Students in 8 schools within Atherton — a key ADAPT partner</div></div>
+      <div class="stat-cell"><div class="n">$8,500</div><div class="l">Town budget allocation (FY 2019–20) for drills &amp; equipment</div></div>
+      <div class="stat-cell"><div class="n">7 Days</div><div class="l">Self-sufficiency ADAPT prepares residents for, post-disaster</div></div>
+    </div>
+    <p style="max-width:820px; margin:2rem auto 0; text-align:center; font-size:0.85rem; color:var(--cream-dim); font-style:italic;">ADAPT–Get Ready Atherton works alongside "Get Ready Menlo Park" programming and coordinates with the California "Get Ready" program and FEMA's Ready.gov initiatives.</p>
+  </div>
+</section>
+
+<!-- ================= FRIENDS OF LIBRARY ================= -->
+<section class="deepdive alt rule-top" id="library">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Friends of Atherton Library</span>
+      <h2>Bringing the library to life, every week</h2>
+      <p>As Chair of the Friends of Atherton Library since 2023, Christine has transformed a well-respected nonprofit board into an active civic institution — and continues this work alongside her role on the Council.</p>
+    </div>
+
+    <div class="dd-story" style="max-width:820px;">
+      <div class="dd-block">
+        <p>The Friends of Atherton Library is a 501(c)(3) nonprofit founded in 1967 whose mission is to promote community support and use of the Atherton Community Library. Under Christine's leadership, the board has partnered with the Town of Atherton, the Atherton Police Department, and library staff to expand programming, grow membership, and establish the library as a genuine community center for residents of all ages.</p>
+        <p>The library itself — which the community helped design and fund — has been called <em>"a centerpiece of Atherton, a welcoming oasis and a prime destination for the community"</em> by the AIA jury that gave it a national Library Building Award. Rick DeGolia serves as the San Mateo County Library JPA Governing Board representative on the Friends board — bringing county-level governance expertise alongside Christine's community programming leadership.</p>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:4rem; margin-bottom:1.5rem; text-align:left; max-width:820px;">
+      <span class="eyebrow">Speaker Series — a growing cultural program</span>
+    </div>
+    <div class="speaker-list" style="max-width:820px; margin:0 auto;">
+      <div class="speaker">
+        <div class="who">Jim Caldwell<span>Art Historian</span></div>
+        <div class="what">Standing-room-only opening event; returned for a second presentation on Mary Cassatt.</div>
+      </div>
+      <div class="speaker">
+        <div class="who">Marit Weisenberg<span>Author</span></div>
+        <div class="what">Locally born bestselling novelist; her latest book is set in and around Atherton, with signed copies given away.</div>
+      </div>
+      <div class="speaker">
+        <div class="who">Russ Bertetta &amp; Rodney Paul<span>Musicians &amp; Artists</span></div>
+        <div class="what">A musical and artistic retrospective celebrating local creative history.</div>
+      </div>
+      <div class="speaker">
+        <div class="who">Robert Buelteman<span>Photographer</span></div>
+        <div class="what">A decade of work capturing the Crystal Springs Watershed, shared with Atherton residents.</div>
+      </div>
+      <div class="speaker">
+        <div class="who">Janelle Brown<span>Novelist</span></div>
+        <div class="what">Atherton and Woodside native discussing her latest novel in a special in-person author talk.</div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:4rem; margin-bottom:0;">
+      <span class="eyebrow">🐸 From Concept to Community Landmark</span>
+      <h2 style="font-size:1.9rem;">"The Toad"</h2>
+      <p>A bronze sculpture celebrating the joy of literature — conceived, commissioned, and donated to the Atherton Community Library by the Friends under Christine's leadership. Unveiled June 15, 2023.</p>
+    </div>
+
+    <div class="toad-grid">
+      <div class="toad-step">
+        <div class="step-label">Step 1 — Concept Design · 2022</div>
+        <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+        <p>The original design drawing for the sculpture — a dapper toad reading a book, capturing the joy of literature and exploration that the Friends wanted to bring to the library.</p>
+      </div>
+      <div class="toad-step">
+        <div class="step-label">Step 2 — Sculptor's Studio · April 2022</div>
+        <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+        <p>The clay maquette taking shape in the sculptor's workshop — the full-scale model from which the bronze casting would be made.</p>
+      </div>
+      <div class="toad-step">
+        <div class="step-label">Step 3 — Unveiling Day · June 15, 2023</div>
+        <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+        <p>Christine at the dedication ceremony in the Atherton Town Center, with the Historic Town Hall behind — the toad in its permanent home.</p>
+      </div>
+    </div>
+
+    <div class="dd-photo-row" style="margin-top:3.5rem;">
+      <div class="photo-ph"><div class="ph-inner"><div class="ph-icon">🖼️</div><div class="ph-label">Photo pending</div></div></div>
+      <div class="dd-photo-caption">Vice Mayor Rick DeGolia, Chair Christine David, and Councilman Bill Widmer touring the stacks during construction of the new Atherton Community Library</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRIORITIES ================= -->
+<section class="platform rule-top" id="priorities">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">On the Council</span>
+      <h2>What Christine is championing in office</h2>
+      <p>These priorities flow directly from what she learned in committees, at community meetings, and as a resident of this town for more than twenty years — and now guide her votes on the dais.</p>
+    </div>
+
+    <div class="platform-grid">
+      <div class="plank">
+        <span class="plank-icon">🏘️</span>
+        <h3>Resident voices — genuinely heard</h3>
+        <p>Residents should lead, not just advise — their voices genuinely heard in every significant decision. Christine resigned from the Park and Recreation Committee because the Council dismissed its recommendation without engaging with the community's work. That experience guides how she votes.</p>
+      </div>
+      <div class="plank">
+        <span class="plank-icon">🌳</span>
+        <h3>Holbrook-Palmer Park — protected as recreation</h3>
+        <p>Atherton's only public park belongs to its residents for recreation, community events, and open space. Christine has twice participated in defending it against conflicting uses. She will continue to insist that the park's recreational character is the primary constraint on any proposal affecting it.</p>
+      </div>
+      <div class="plank">
+        <span class="plank-icon">📚</span>
+        <h3>A living, thriving library</h3>
+        <p>Continued investment in programming, partnerships, and events that make the library Atherton's true community center. The Friends' work is proof of concept — Christine will protect the institution from the dais while continuing to lead the Friends board.</p>
+      </div>
+      <div class="plank">
+        <span class="plank-icon">🚗</span>
+        <h3>Pedestrian &amp; bicycle safety</h3>
+        <p>As a former Vice Chair of the Transportation, Bicycle and Pedestrian Safety Committee, Christine brings firsthand knowledge of Atherton's infrastructure needs — prioritizing safe pedestrian routes, crosswalk improvements, and bicycle paths for residents of all ages.</p>
+      </div>
+      <div class="plank">
+        <span class="plank-icon">🚨</span>
+        <h3>Emergency preparedness</h3>
+        <p>Christine's two-year ADAPT board tenure is the rare civic credential that addresses Atherton's actual physical vulnerability. She understands how the organization works and will strengthen the partnership between ADAPT, police, fire, and county emergency services.</p>
+      </div>
+      <div class="plank">
+        <span class="plank-icon">🤝</span>
+        <h3>Community character &amp; history</h3>
+        <p>Atherton's extraordinary character — its trees, its quiet streets, its neighborly culture, its history — is not an accident. It is the result of deliberate decisions made over decades. Christine will protect it as the defining constraint on every planning decision the Council faces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSING / CONTACT ================= -->
+<section class="closing" id="contact">
+  <div class="closing-inner">
+    <span class="eyebrow">Office of Council Member Christine E. David · Town of Atherton</span>
+    <h2>Constituent Services</h2>
+    <p>Whether it's a question about a committee, a concern about the park, or an idea for the library — Council Member David's office wants to hear from Atherton residents directly.</p>
+    <div class="closing-contact">
+      <div>✉️ <a href="mailto:cdavid@ci.athertonca.gov">cdavid@ci.athertonca.gov</a></div>
+      <div>📍 Atherton Town Center · 80 Fair Oaks Lane · Atherton, CA 94027</div>
+      <div>Office hours by appointment — contact staff to schedule</div>
+    </div>
+    <div class="closing-actions">
+      <a href="mailto:cdavid@ci.athertonca.gov" class="btn-primary">Send a Message</a>
+    </div>
+  </div>
+</section>
+
+<footer>Office of Council Member Christine E. David &nbsp;·&nbsp; Town of Atherton, CA &nbsp;·&nbsp; © 2026 Christine E. David</footer>
+
+</body>
+</html>
